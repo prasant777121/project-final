@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        {{>header}}
+
+    </div>
+    <h1>Dashboard</h1>
+    <table width="50%">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Image</th>
+            <th>Verified</th>
+            <th>voted</th>
+            <th>vote</th>
+        </tr>
+
+        {{#if users}}
+        {{#each users}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td><img src="/userImg/{{image}}" width="100px" height="100px" alt="{{image}}"></td>
+            <td>
+                {{#if is_verified}}
+                verified
+                {{else}}
+                not verified
+                {{/if}}
+            </td>
+            <td>
+                {{#if is_voted}}
+                voted
+                {{else}}
+                not voted
+                {{/if}}
+            </td>
+            <td>
+              
+                 <a href="/admin/voted?id={{user._id}}">Vote</a>
+            </td>
+        </tr>
+        {{/each}}
+        {{else}}
+        <tr>
+            <td colspan="4">Users not found</td>
+        </tr>
+        {{/if}}
+    </table>
+
+    {{!-- <a href="/admin/home">home</a> --}}
+</body>
+
+</html>
+
+{{!--
+<% if(users.length>0){
+    for(let i=0;i<users.length;i++){ %>
+        <tr>
+            <td>
+                <%=users[i].name %>
+            </td>
+            <td>
+                <%=users[i].email %>
+            </td>
+            <td><img src="/userlmg/ <%=users[i].image%>" alt="ok" width="100px" </td>
+        </tr>
+        }
+        } --}}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <div class="header">
+    {{>header}}
+
+</div>
+    <h1>Welcome, {{admin.name}}</h1>
+    <a href="/admin/dashboard">dashboard</a>
+  
+   
+    <table width="20%">
+        <tr>
+            <div class=" .picture1">
+                  <td><img  src="/userImg/{{admin.image}}"  width="100px" height="100px"  alt="{{admin.image}}"></td>
+            </div>
+          
+        </tr>
+         <tr><td>ID</td>
+            <td>{{admin._id}}</td>
+        </tr>
+         <tr><td>Name</td>
+            <td>{{admin.name}}</td>
+        </tr>
+         <tr><td>Email</td>
+            <td>{{admin.email}}</td>
+        </tr>
+        {{!-- not working --}}
+        {{!-- <tr><td>Status</td>
+            <td>
+                {{if(user.is_verified===1){
+                    {{
+                        <p>verified</p>
+                    }}
+                }
+                }}
+
+
+            </td>
+        </tr> --}}
+
+
+
+    </table>
+             
+            <a  href="/logout">logout</a><br>
+            <a href="/edit?id={{admin._id}}">Edit</a>
+</body>
+</html>

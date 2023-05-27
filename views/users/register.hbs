@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+            body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+     background-image: url('https://source.unsplash.com/s2LFtsnC7MU');
+      background-size: cover;
+      background-position: center;
+  
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+    }
+.glass {
+  
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   
+    margin-top: 10rem;
+    margin-left: 40rem;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+        h1{
+  -webkit-text-fill-color:   red;
+}
+    </style>
+</head>
+<body>
+        {{#if message}}
+        <p style="color: green;">{{message}}</p>
+    {{/if}}
+    <div class="header">
+    {{>header}}
+
+</div>
+
+
+  
+    <form  class=glass action="" method="post" enctype="multipart/form-data" >
+    <h1>Registration Form</h1>
+        <input type="text" name="name" placeholder="Enter name" required>
+        <br><br>
+        <input type="email" name="email" placeholder="Enter email" required>
+        <br><br>
+        <input type="file" name="image" required>
+        <br><br>
+        <input type="password" name="password" placeholder="Enter password" required>
+        <br><br>
+        <input type="submit" value="register">
+        <br><br>
+    </form>
+    
+</body>
+</html>
+   

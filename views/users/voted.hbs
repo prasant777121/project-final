@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+     background-image: url('https://source.unsplash.com/s2LFtsnC7MU');
+      background-size: cover;
+      background-position: center;
+  
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+    }
+.glass {
+  
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   
+    margin-top: 10rem;
+    margin-left: 40rem;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1{
+  -webkit-text-fill-color:   red;
+}
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+<div class="header">
+    {{>header}}
+
+</div>
+
+
+
+
+ 
+
+
+
+
+  <form action="" method="POST"  enctype="multipart/form-data">
+    <h1>YOu have successfully voted</h1>
+     <input type="hidden" name="user_id" value="{{user._id}}">
+  
+
+    
+
+   
+  </form>
+</body>
+
+</html>

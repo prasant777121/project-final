@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+     background-image: url('https://source.unsplash.com/s2LFtsnC7MU');
+      background-size: cover;
+      background-position: center;
+  
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    margin: 0;
+    padding: 0;
+    }
+.glass {
+  
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   
+    margin-top: 10rem;
+    margin-left: 40rem;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1{
+  -webkit-text-fill-color:   red;
+}
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+<div class="header">
+    {{>header}}
+
+</div>
+
+
+
+
+ 
+
+  {{#if message}}
+  <p style="color: green;">{{message}}</p>
+  {{/if}}
+
+
+  <form class=glass action="" method="POST">
+    <h1>Admin Login</h1>
+  
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" value="" name="email" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" value="" name="password" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">login btn</button><br><br> 
+    <a href="admin/forget">forget password </a>
+
+   
+  </form>
+</body>
+
+</html>

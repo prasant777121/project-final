@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <img src="userImg/{{user.image}}" width="100px" height="100px" alt="ok"><br><br>
+    <input type="file" name="image"><br>
+ 
+    <form action="" method="POST" enctype="multipart/form-data" >
+    <input type="text" name="name"  value="{{user.name}}" placeholder="enter name" required><br><br>
+    <input type="text" name="user_id" value="{{user._id}}">
+    <input type="email" name="email"  value="{{user.email}}" placeholder="enter email" required><br><br>
+    <input type="submit" value="update">
+    </form>
+</body>
+</html>
